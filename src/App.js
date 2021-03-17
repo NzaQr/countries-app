@@ -1,7 +1,5 @@
-import React from "react"
-
-export default function App(){
-return (
-    
-)
+import React from "react";
+import CountryFetch from "./CountryFetch";
+export default function App() {
+  return <CountryFetch />;
 }
