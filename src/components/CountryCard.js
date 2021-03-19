@@ -6,12 +6,22 @@ export default function CountryCard({
   return (
     <div className="card-container">
       <img className="flag" src={flag} alt={name}></img>
-      <h3 className="name">{name}</h3>
-      <ul>
-        <li>Population: {population}</li>
-        <li>Region: {region}</li>
-        <li>Capital: {capital}</li>
-      </ul>
+      <div className="country-info">
+        <h3 className="name">{name}</h3>
+        <ul>
+          <li>
+            <span className="bold">Population:</span> {population}
+          </li>
+          <li>
+            <span className="bold">Region: </span>
+            {region}
+          </li>
+          <li>
+            <span className="bold">Capital: </span>
+            {capital}
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
