@@ -1,0 +1,107 @@
+html {
+  --text-color: hsl(200, 15%, 8%);
+  --background: hsl(0, 0%, 98%);
+  --element-background: hsl(0, 0%, 100%);
+  --shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+html.dark {
+  --text-color: hsl(0, 0%, 100%);
+  --background: hsl(207, 26%, 17%);
+  --element-background: hsl(209, 23%, 22%);
+  --shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 30px 40px 30px;
+  background: var(--background);
+  transition: background-color 0.5s;
+}
+
+.search-bar,
+select {
+  color: var(--text-color);
+  background: var(--element-background);
+  transition: background-color 0.5s;
+  font-family: inherit;
+  box-shadow: var(--shadow);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 8rem 1rem 2rem;
+  margin: 20px 0px 30px 0px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.search-image {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  width: 10px;
+  height: 57px;
+}
+
+select {
+  padding: 1rem 6rem 1rem 1rem;
+}
+
+.countries-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background);
+  transition: background-color 0.5s;
+}
+
+.card-container {
+  margin: 1.5em;
+  width: 300px;
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  background: var(--card-background);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+  max-width: 100%;
+}
+
+.country-info {
+  padding: 15px;
+}
+
+.name {
+  margin-top: 0px;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+@media (min-width: 900px) {
+  .countries-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
