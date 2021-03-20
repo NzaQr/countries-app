@@ -36,7 +36,6 @@ export default function Header() {
         <h1>Where in the world?</h1>
       </Link>
       <div className="dark-mode-container">
-        <i className="fas fa-moon moon"></i>
         <label className="switch">
           <input type="checkbox" checked={isDark} onClick={handleToggle} />
           <span className="slider round"></span>

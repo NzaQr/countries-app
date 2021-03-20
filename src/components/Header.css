@@ -16,14 +16,6 @@ h1 {
   position: relative;
 }
 
-.moon {
-  position: absolute;
-  bottom: 8px;
-  left: -20px;
-  width: 10px;
-  height: 15px;
-}
-
 .switch {
   position: relative;
   display: inline-block;

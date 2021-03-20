@@ -29,7 +29,7 @@
 }
 
 .country-info-flag {
-  width: 600px;
+  max-width: 600px;
 }
 
 img {
