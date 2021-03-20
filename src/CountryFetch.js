@@ -5,6 +5,7 @@ import "./components/CountryCard.css";
 export default function CountryFetch() {
   const [countries, setCountries] = useState([]);
   const [query, setQuery] = useState("");
+  const [region, setRegion] = useState("");
   const url = `https://restcountries.eu/rest/v2/all`;
   const urlSearch = `https://restcountries.eu/rest/v2/name/${query}`;
 
@@ -23,17 +24,22 @@ export default function CountryFetch() {
     console.log(countries);
   };
 
-  const handleChange = (e) => {
-    setQuery(e.target.value);
+  const handleChange = (event) => {
+    setQuery(event.target.value);
+  };
+  const handleSelect = (event) => {
+    setRegion(event.target.value);
   };
 
   useEffect(() => {
     fetchCountry();
   }, []);
 
-  const updateCountries = countries.filter((i) => {
-    return i.name.toLowerCase().includes(query);
-  });
+  const updateCountries = countries.filter(
+    (country) =>
+      country.name.toLowerCase().includes(query) &&
+      country.region.toLowerCase().includes(region.toLocaleLowerCase())
+  );
 
   return (
     <>
@@ -47,13 +53,13 @@ export default function CountryFetch() {
           />
           <i className="fas fa-search search-image"></i>
         </div>
-        <select>
-          <option>Filter by Region</option>
-          <option>Africa</option>
-          <option>America</option>
-          <option>Asia</option>
-          <option>Europe</option>
-          <option>Oceania</option>
+        <select value={region} onChange={handleSelect}>
+          <option value="">Filter by Region</option>
+          <option value="Africa">Africa</option>
+          <option value="America">America</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
         </select>
       </form>
       <div className="countries-container">
