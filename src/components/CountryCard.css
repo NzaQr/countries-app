@@ -12,6 +12,14 @@ html.dark {
   --shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
+body {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--text-color);
+  background: var(--background);
+  transition: background-color 0.5s;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -58,6 +66,17 @@ select {
   transition: background-color 0.5s;
 }
 
+.link,
+.app-title {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.link:visited,
+.app-title:visited {
+  color: none;
+}
+
 .card-container {
   margin: 1.5em;
   width: 300px;
@@ -66,7 +85,7 @@ select {
   background: var(--card-background);
 }
 
-img {
+.flag {
   border-radius: 5px 5px 0 0;
   max-width: 100%;
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import "./Header.css";
 import "./CountryCard.css";
+import { Link } from "react-router-dom";
 
 const DARK_CLASS = "dark";
 
@@ -31,7 +32,9 @@ export default function Header() {
   };
   return (
     <div className="header-container">
-      <h1>Where in the world?</h1>
+      <Link to="/" className="app-title">
+        <h1>Where in the world?</h1>
+      </Link>
       <div className="dark-mode-container">
         <i className="fas fa-moon moon"></i>
         <label className="switch">
