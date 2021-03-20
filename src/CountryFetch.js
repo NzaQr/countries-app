@@ -60,9 +60,9 @@ export default function CountryFetch() {
         {updateCountries.map((country) => {
           const { numericCode } = country;
           return (
-            <article key={numericCode}>
+            <div key={numericCode}>
               <CountryCard country={country} />
-            </article>
+            </div>
           );
         })}
       </div>
