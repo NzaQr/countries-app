@@ -6,13 +6,13 @@ import Header from "./components/Header";
 export default function App() {
   return (
     <Router>
-      <div>
-        <Header />
-        <Route exact path="/">
-          <CountryFetch />
-        </Route>
-        <Route path="/countries/:name" children={<CountryInfo />}></Route>
-      </div>
+      <Header />
+      <Route exact path="/countries-app">
+        <CountryFetch />
+      </Route>
+      <Route path="/countries/:name">
+        <CountryInfo />
+      </Route>
     </Router>
   );
 }

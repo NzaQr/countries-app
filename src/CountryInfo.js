@@ -21,7 +21,7 @@ export default function CountryInfo() {
   return (
     <>
       <div className="container">
-        <Link to="/" className="back-btn">
+        <Link to="/countries-app" className="back-btn">
           <i className="fas fa-arrow-left"></i> Back
         </Link>
         {country.map((country) => {
