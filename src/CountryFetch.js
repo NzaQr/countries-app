@@ -27,6 +27,7 @@ export default function CountryFetch() {
   const handleChange = (event) => {
     setQuery(event.target.value);
   };
+
   const handleSelect = (event) => {
     setRegion(event.target.value);
   };
@@ -37,7 +38,7 @@ export default function CountryFetch() {
 
   const updateCountries = countries.filter(
     (country) =>
-      country.name.toLowerCase().includes(query) &&
+      country.name.toLowerCase().includes(query.toLowerCase()) &&
       country.region.toLowerCase().includes(region.toLocaleLowerCase())
   );
 
