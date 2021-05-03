@@ -85,9 +85,18 @@ select {
   background: var(--card-background);
 }
 
+.flag-container {
+  border-radius: 5px 5px 0 0;
+
+  height: 12rem;
+  width: 100%;
+}
+
 .flag {
   border-radius: 5px 5px 0 0;
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
 }
 
 .country-info {
