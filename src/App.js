@@ -7,7 +7,7 @@ export default function App() {
   return (
     <Router>
       <Header />
-      <Route exact path="/countries-app">
+      <Route exact path="/">
         <CountryFetch />
       </Route>
       <Route path="/countries/:name">
